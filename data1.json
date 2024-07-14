@@ -1,0 +1,203 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "Is anyone there?",
+                "Hello",
+                "Hay",
+                "Hi there",
+                "Hey there",
+                "Helo",
+                "Hii",
+                "Heyy",
+                "Sup",
+                "Yo",
+                "Is any1 there?",
+                "Helloo",
+                "Hiya",
+                "Hay there",
+                "Heya",
+                "Howdy",
+                "Anbody home?",
+                "G'day",
+                "Greetings",
+                "Wazzup",
+                "Whats up",
+                "Holla",
+                "Hi their",
+                "Hey thier",
+                "Hello their",
+                "Is some1 ther?",
+                "Hellow",
+                "Helo there"
+            ],
+            "responses": [
+                "Hello",
+                "Hi",
+                "Hi there",
+                "Hey there!"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "That's all for now",
+                "Cya",
+                "Byebye",
+                "I'm off",
+                "I'm leaving",
+                "Have a good one",
+                "Bye for now",
+                "Good bye",
+                "Good-bye",
+                "Bye bye",
+                "Bai",
+                "See ya",
+                "See u",
+                "Laters",
+                "Thats all fr now",
+                "See yu latr"
+            ],
+            "responses": [
+                "See you later",
+                "Have a nice day",
+                "Bye! Come back again",
+                "It's been a pleasure. Goodbye!"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thanks for the help",
+                "I appreciate it",
+                "You've been a great help",
+                "I'm grateful",
+                "That's awesome, thanks!",
+                "I truly appreciate your assistance.",
+                "Thank you very much for your help",
+                "Thx",
+                "Thanx",
+                "Thnks",
+                "Thks",
+                "Thanks a lot",
+                "Thank u",
+                "Thank ya",
+                "Thankz",
+                "Much appreciated"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure",
+                "You're most welcome!",
+                "Glad I could assist!"
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "Could you help me?",
+                "give me a hand please",
+                "Can you help?",
+                "I need a support",
+                "I need a help",
+                "support me please",
+                "Can you assist me?",
+                "Help!",
+                "I need assistance",
+                "Can u help?",
+                "Halp",
+                "Halp me",
+                "Helpp",
+                "I need sum help",
+                "Assitance required",
+                "Help needed",
+                "Can someone help?",
+                "Is there any help available?",
+                "I'm having trouble",
+                "I'm struggling with something",
+                "Could use some help here",
+                "Any chance of getting help?",
+                "Plz help",
+                "Help plz",
+                "Assist me pls",
+                "Cn u giv me a hand?",
+                "I ned suport",
+                "Helo, I ned halp",
+                "Asist me plese",
+                "Im in truble, can u help?",
+                "Helppp meee",
+                "Can I get sum assistance?"
+            ],
+            "responses": [
+                "Tell me how can assist you",
+                "Tell me your problem to assist you",
+                "Yes Sure, How can I support you"
+            ]
+        },
+        {
+            "tag": "complaint",
+            "patterns": [
+                "have a complaint",
+                "I want to raise a complaint",
+                "there is a complaint about a service",
+                "I need to complain",
+                "I'm not happy with the service",
+                "I want to complain",
+                "I have an issue to report",
+                "Something went wrong",
+                "I'm dissatisfied",
+                "I wanna complain",
+                "This is unacceptable",
+                "I demand to speak to someone",
+                "I want to lodge a formal complaint",
+                "Your service is terrible",
+                "I've had a bad experience with your service",
+                "This is not what I expected",
+                "I want to speak to a manager",
+                "This is ridiculous",
+                "I'm having problems with your delivery"
+            ],
+            "responses": [
+                "Please contact customer servise via 011 1234567 ",
+                "Please try to contact our custermer service 011 1234567 "
+            ]
+        },
+        {
+            "tag": "location",
+            "patterns": [
+                "Can you tell me where the parcel with tracking ID AB123456789 is?",
+                "Where is the parcel SP457209142",
+                "What's the current status of my shipment GT325673452?",
+                "Where is my package SP457209142?",
+                "Any update on GT325673452?",
+                "Track SP457209142 for me, please.",
+                "I need to know where my parcel AB123456789 is right now.",
+                "GT325673452, can you track this for me?",
+                "Can you give me the current location and status of parcel AB123456789?",
+                "I'm waiting for SP457209142. Any idea where it might be?",
+                "Is SP457209142 out for delivery?",
+                "Wher is AB123456789 rite now?",
+                "Wheres my pakage AB123456789?",
+                "Traking for GT325673452 plz",
+                "Can u locate XV325673452 for me?",
+                "Locate WA234356982",
+                "Parcel AB123456789 location?",
+                "Help me track SP457209142",
+                "AB123456789 - which city is it in?",
+                "Has QS325672552 arrived?",
+                "TH462209142 any news?"
+            ],
+            "responses": []
+        }
+    ]
+}
