@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Location Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Fetch Location Data</h2>
+    <form id="locationForm">
+        <label for="locationId">Location ID:</label>
+        <input type="number" id="locationId" name="locationId" required>
+        <button type="submit">Fetch Data</button>
+    </form>
+
+    <div id="result" class="result" style="display:none;">
+        <h3>Location Data:</h3>
+        <pre id="locationData"></pre>
+    </div>
+</div>
+
+<script>
+    document.getElementById('locationForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const locationId = document.getElementById('locationId').value;
+        const resultDiv = document.getElementById('result');
+        const locationDataDiv = document.getElementById('locationData');
+
+        try {
+            const response = await fetch(`http://127.0.0.1:8000/fetch-data/${locationId}`);
+            const data = await response.json();
+
+            if (response.ok) {
+                locationDataDiv.textContent = JSON.stringify(data, null, 4);
+                resultDiv.style.display = 'block';
+            } else {
+                locationDataDiv.textContent = data.error;
+                resultDiv.style.display = 'block';
+            }
+        } catch (error) {
+            locationDataDiv.textContent = 'An error occurred while fetching data.';
+            resultDiv.style.display = 'block';
+        }
+    });
+</script>
+
+</body>
+</html>

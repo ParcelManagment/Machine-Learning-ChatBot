@@ -120,6 +120,7 @@
     chatForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const query = userInput.value;
+      const userId = "1234";
       if (query) {
         addMessage(query, true);
         userInput.value = '';
@@ -130,7 +131,7 @@
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ message: query })
+            body: JSON.stringify({ message: query, userId: userId})
           });
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -139,7 +140,11 @@
           const botResponse = await response.json();
 
           setTimeout(()=>{
-            addMessage(botResponse.response);
+            if(botResponse.response.location){
+              addMessage(botResponse.response.location);
+            }else{
+              addMessage(botResponse.response.message);
+            }
           },1000);
           
         } catch (error) {
