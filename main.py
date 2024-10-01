@@ -26,7 +26,7 @@ app.add_middleware(
 
 # Load the data
 try:
-    with open('data.json', 'r') as file:
+    with open('data2.json', 'r') as file:
         data = json.load(file)
 except FileNotFoundError:
     print("Error: intents.json file not found.")
@@ -117,7 +117,7 @@ def getlocation(tracking_id):
 
             # Check if the request was successful
     except requests.RequestException as e:
-        response += f" - Error occurred while sending tracking id {tracking_id} to external server: {str(e)}"
+        print(f" - Error occurred while sending tracking id {tracking_id} to external server: {str(e)}")
       
     return response
     
@@ -167,13 +167,13 @@ async def chat(chat_input: ChatInput):
                     if tracking_id: 
                         response = getlocation(tracking_id) 
                     else:
-                        response = "No valid tracking ID found in your message."  
+                        response = {"message":"No valid tracking ID found in your message."  }
                 else:
                     response = {"message":random.choice(i['responses'])}
                 break  # Stop the loop once the response is found
 
     else:
-        response = "Sorry, I didn't understand that. Please ask questions related to our service"
+        response = {"message":"Sorry, I didn't understand that. Please ask questions related to our service"}
 
     return {"response": response}
 
