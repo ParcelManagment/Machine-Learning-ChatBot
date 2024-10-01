@@ -26,7 +26,7 @@ app.add_middleware(
 
 # Load the data
 try:
-    with open('data2.json', 'r') as file:
+    with open('data.json', 'r') as file:
         data = json.load(file)
 except FileNotFoundError:
     print("Error: intents.json file not found.")
